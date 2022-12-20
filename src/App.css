@@ -1,10 +1,8 @@
 .App {
   text-align: center;
 }
-.black-nav {
+nav {
   display:  flex;
-  background: black;
-  color:white
 }
 div {
   box-sizing: border-box

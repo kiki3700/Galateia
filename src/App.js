@@ -2,36 +2,27 @@ import logo from './logo.svg';
 import './App.css';
 import {useState} from 'react'
 
-function App() {
-  let post = '강남 우동 맛집'
+function Header(){
+  return <header>Journey To The West</header>
+}
 
-  let [title, set_button] = useState(["남자 코트 추천", "강남 우동 맛집", "파이썬 독학"]);
-  let [like, setLike] = useState(0)
+function Nav(){
+  return <nav>
+    <ol>
+      <li><a href='/'>about</a></li>
+      <li><a href='/'>article</a></li>
+    </ol>
+  </nav>
+}
+function Article(){ 
+  return <p>"죠니! 「LESSON 5」야! 분명…다음은 「LESSON 5」다! 나는 이 스틸 볼 런 레이스에서 언제나 지름길만을 찾아왔지만 「한번은 멀리 돌아갔었지.」 「그곳이 나의 지름길이었어.」 이 대륙을 횡단하는 동안은 더욱 그랬었지. 그리고 네가 있었기에 그 길을 건너올 수 있었어."</p>
+}
+function App() {
   return (
     <div className="App">
-      <div className = "black-nav">
-        <h4 id = {post} style = {{color : 'red'}}>블로그임</h4>
-      </div>
-      <button onClick={()=>{
-        let copy = [...title]
-        copy.sort()
-        set_button(copy)
-      }}>정렬</button>
-      <div className = "list">
-          <h4>{title[0]} <span onClick={()=> {setLike(like+1)}}>따봉</span> {like}</h4>
-          <span onClick={()=>{
-            let copy = [...title]
-            copy[0] = "여자코트 추천"
-            set_button(copy)}}>수정</span>
-
-          <p>2월 17일 발행</p>
-      </div>      <div className = "list">
-          <h4>{title[1]}</h4>
-          <p>2월 17일 발행</p>
-      </div>      <div className = "list">
-          <h4>{title[2]}</h4>
-          <p>2월 17일 발행</p>
-      </div>
+      <Header></Header>
+      <Nav></Nav>
+      <Article></Article>
     </div>
   );
 }
