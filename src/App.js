@@ -10,7 +10,7 @@ function Nav(){
   return <nav>
     <ol>
       <li><a href='/'>about</a></li>
-      <li><a href='/'>article</a></li>
+      <li><a href='/'>articlae</a></li>
     </ol>
   </nav>
 }
